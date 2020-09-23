@@ -1,33 +1,47 @@
 {
-	"name": "template",
-	"version": "1.0.0",
-	"description": "",
-	"main": "server/index.js",
-	"scripts": {
-		"test": "mocha \"**/*.spec.js\"",
-		"build": "webpack",
-		"build:dev": "webpack -w",
-		"start": "node server/index.js",
-		"start:dev": "npm run build && nodemon --ignore client --ignore server/public"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"express": "^4.17.1",
-		"morgan": "^1.10.0",
-		"pg": "^8.3.3",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"sequelize": "^6.3.4"
-	},
-	"devDependencies": {
-		"chai": "^4.2.0",
-		"mocha": "^8.1.2",
-		"nodemon": "^2.0.4",
-		"webpack": "^4.44.1",
-		"webpack-cli": "^3.3.12",
-		"@babel/core": "^7.4.3",
-		"@babel/preset-react": "^7.0.0",
-		"babel-loader": "^8.0.5"
-	}
+  "name": "template",
+  "version": "1.0.0",
+  "description": "- heroku deploy step-by-step - other setup step-by-step (npm, git, createdb etc) - any other how-to notes",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "mocha \"**/*.spec.js\"",
+    "build": "webpack",
+    "build:dev": "webpack -w --mode development",
+    "start": "node server/index.js",
+    "start:dev": "nodemon server --ignore dist/ --ignore src/ & npm run build:dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.20.0",
+    "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.2",
+    "nodemon": "^2.0.4",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxavier927/fs-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mxavier927/fs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mxavier927/fs-boilerplate#readme"
 }
